@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I LIKE MODALSSS</title>
+    <title>Modal Example</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     
-<button class="button" data-action="open-modal">Відкрити модалку</button>
+<button data-modal-open class="hero__button" type="button">Відкрити модалку</button>
 <div class="backdrop js-backdrop">
     <div class="modal">
         <h2>Modal window</h2>
@@ -18,9 +18,41 @@
             Users must interact with the modal window before they can return to the parent application. 
             This avoids interrupting the workflow on the main window.
         </p>
-        <button type="button" class="button" data-action="close-modal">Закрити</button>
+        <button type="button" data-modal-close class="hero__button">Закрити</button>
     </div>
 </div>
+
+<form>
+    <p>Choose a color:</p>
+    <label>
+      <input type="radio" name="color" value="red" checked />
+      Red
+    </label>
+    <label>
+      <input type="radio" name="color" value="white" />
+      White
+    </label>
+    <label>
+      <input type="radio" name="color" value="green" />
+      Green
+    </label>
+  </form>
+
+
+  <input type="text" placeholder="Baшe iм'я?" id="name-input" />
+<h1>Привiт, <span id="name-output">незнайомець</span>!</h1>
+
+<input
+  type="text"
+  id="validation-input"
+  data-length="6"
+  placeholder="Введи 6 символів"
+/>
+
+<input id="font-size-control" type="range" min="1" max="100" value="16" />
+<br />
+<span id="text">Тест на зір!</span>
+
 
 <script type="module" src="./index.js"></script>
 </body>
