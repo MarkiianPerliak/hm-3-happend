@@ -1,4 +1,4 @@
-// 1, 2
+// 1, 2 
 
 document.addEventListener('DOMContentLoaded', () => {
     const openModalButton = document.querySelector('[data-modal-open]');
@@ -21,29 +21,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// 3
+// 3 d
 
 const radioElements = document.querySelectorAll('input[name="color"]');
     
-radioElements.forEach(radio => {
-  radio.addEventListener('change', () => {
-    document.body.style.backgroundColor = radio.value;
+radioElements.forEach(color => {
+  color.addEventListener('change', () => {
+    const bodyElement = document.body;
+    bodyElement.style.backgroundColor = color.value;
   });
 });
 
-// 4
+// 4 d
 const nameInput = document.querySelector('#name-input');
 const nameOutput = document.querySelector('#name-output');
 
 nameInput.addEventListener('input', () => {
-  nameOutput.textContent = nameInput.value === '' ? 'незнайомець' : nameInput.value;
+  nameOutput.textContent = nameInput.value;
 });
 
 
 const validationInput = document.querySelector('#validation-input');
 
 validationInput.addEventListener('blur', () => {
-  const requiredLength = parseInt(validationInput.getAttribute('data-length'));
+  const requiredLength = Number(validationInput.getAttribute('data-length'));
   const inputLength = validationInput.value.length;
 
   if (inputLength === requiredLength) {
@@ -55,13 +56,12 @@ validationInput.addEventListener('blur', () => {
   }
 });
 
-// 5
+// 5 d
 
 const fontSizeControl = document.querySelector('#font-size-control');
 const text = document.querySelector('#text');
 
 fontSizeControl.addEventListener('input', () => {
-  text.style.fontSize = fontSizeControl.value + 'px';
+  text.style.fontSize = fontSizeControl.value + '1px';
 });
 
-text.style.fontSize = fontSizeControl.value + 'px';
